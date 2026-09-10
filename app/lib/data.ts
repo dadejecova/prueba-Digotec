@@ -5,22 +5,15 @@
 
 import { Cliente, Alerta } from './types';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+import clientsData from '../public/data/clients_summary.json';
+import alertasData from '../public/data/alertas_vencimiento.json';
 
 export async function getClientes(): Promise<Cliente[]> {
-  const res = await fetch(`${BASE_URL}/data/clients_summary.json`, {
-    cache: 'force-cache', // cached en build time — no recalcula en cada request
-  });
-  if (!res.ok) throw new Error('No se pudo cargar clients_summary.json');
-  return res.json();
+  return clientsData as Cliente[];
 }
 
 export async function getAlertas(): Promise<Alerta[]> {
-  const res = await fetch(`${BASE_URL}/data/alertas_vencimiento.json`, {
-    cache: 'force-cache',
-  });
-  if (!res.ok) throw new Error('No se pudo cargar alertas_vencimiento.json');
-  return res.json();
+  return alertasData as Alerta[];
 }
 
 // Calcula KPIs desde el array de clientes
