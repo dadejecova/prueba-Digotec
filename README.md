@@ -233,7 +233,7 @@ Los componentes de la app están diseñados para ser **stateless y prop-driven**
 
 ## URL pública (Bonus)
 
-> _Agregar URL de Vercel una vez desplegado_
+[https://prueba-digotec.vercel.app](https://prueba-digotec.vercel.app)
 
 ---
 
