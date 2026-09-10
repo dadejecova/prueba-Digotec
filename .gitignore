@@ -1,0 +1,19 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Checkpoints de Jupyter
+.ipynb_checkpoints/
+
+# Dependencias de Node (ya están ignoradas en /app pero por si acaso)
+node_modules/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
